@@ -4,6 +4,10 @@ A simple cross platform implementation to set the prototype of an instianted obj
 
 ## Usage:
 
+```
+$ npm install --save setprototypeof
+```
+
 ```javascript
 var setPrototypeOf = require('setprototypeof');
 
