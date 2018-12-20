@@ -5,7 +5,14 @@
   "main": "index.js",
   "typings": "index.d.ts",
   "scripts": {
-    "test": "standard && mocha"
+    "test": "standard && mocha",
+    "testallversions": "npm run node010 && npm run node4 && npm run node6 && npm run node9 && npm run node11",
+    "testversion": "docker run -it --rm -v $(PWD):/usr/src/app -w /usr/src/app node:${NODE_VER} npm install mocha@${MOCHA_VER:-latest} && npm t",
+    "node010": "NODE_VER=0.10 MOCHA_VER=3 npm run testversion",
+    "node4": "NODE_VER=4 npm run testversion",
+    "node6": "NODE_VER=6 npm run testversion",
+    "node9": "NODE_VER=9 npm run testversion",
+    "node11": "NODE_VER=11 npm run testversion"
   },
   "repository": {
     "type": "git",
