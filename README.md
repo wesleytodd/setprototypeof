@@ -17,9 +17,9 @@ var setPrototypeOf = require('setprototypeof')
 
 var obj = {}
 setPrototypeOf(obj, {
-	foo: function () {
-		return 'bar'
-	}
+  foo: function () {
+    return 'bar'
+  }
 })
 obj.foo() // bar
 ```
