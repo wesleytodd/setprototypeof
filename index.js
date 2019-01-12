@@ -13,6 +13,7 @@ function inheritProperties (obj, proto) {
       Object.defineProperty(obj, prop, {
         get: function() { return proto[prop] },
         set: function(val) { delete obj[prop]; obj[prop] = val },
+        enumerable: proto.propertyIsEnumerable(prop),
         configurable: true
       })
     }
