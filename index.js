@@ -8,7 +8,9 @@ function setProtoOf (obj, proto) {
 }
 
 function inheritProperties (obj, proto) {
-  for (var prop in proto) {
+  var props = Object.getOwnPropertyNames(proto)
+  for (var i=0; i<props.length; i++) {
+    var prop = props[i]
     if (!obj.hasOwnProperty(prop)) {
       Object.defineProperty(obj, prop, {
         get: function() { return proto[prop] },
