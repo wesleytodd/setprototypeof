@@ -13,8 +13,8 @@ function inheritProperties (obj, proto) {
     var prop = props[i]
     if (!obj.hasOwnProperty(prop)) {
       Object.defineProperty(obj, prop, {
-        get: function() { return proto[prop] },
-        set: function(val) { delete obj[prop]; obj[prop] = val },
+        get: (function(prop) {return function() { return proto[prop] }})(prop),
+        set: (function(prop) {return function(val) { delete obj[prop]; obj[prop] = val }})(prop),
         enumerable: proto.propertyIsEnumerable(prop),
         configurable: true
       })
