@@ -12,7 +12,9 @@
     "node4": "NODE_VER=4 npm run testversion",
     "node6": "NODE_VER=6 npm run testversion",
     "node9": "NODE_VER=9 npm run testversion",
-    "node11": "NODE_VER=11 npm run testversion"
+    "node11": "NODE_VER=11 npm run testversion",
+	"prepublishOnly": "npm t",
+	"postpublish": "git push origin && git push origin --tags"
   },
   "repository": {
     "type": "git",
