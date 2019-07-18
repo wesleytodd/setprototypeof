@@ -30,7 +30,7 @@
   },
   "homepage": "https://github.com/wesleytodd/setprototypeof",
   "devDependencies": {
-    "mocha": "^5.2.0",
+    "mocha": "^6.1.4",
     "standard": "^12.0.1"
   }
 }
