@@ -1,6 +1,6 @@
 {
   "name": "setprototypeof",
-  "version": "1.1.1",
+  "version": "1.2.0",
   "description": "A small polyfill for Object.setprototypeof",
   "main": "index.js",
   "typings": "index.d.ts",
@@ -13,8 +13,8 @@
     "node6": "NODE_VER=6 npm run testversion",
     "node9": "NODE_VER=9 npm run testversion",
     "node11": "NODE_VER=11 npm run testversion",
-	"prepublishOnly": "npm t",
-	"postpublish": "git push origin && git push origin --tags"
+    "prepublishOnly": "npm t",
+    "postpublish": "git push origin && git push origin --tags"
   },
   "repository": {
     "type": "git",
