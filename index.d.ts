@@ -1,2 +1,2 @@
-declare function setPrototypeOf(o: any, proto: object | null): any;
+declare function setPrototypeOf(o: object, proto: object | null): object;
 export = setPrototypeOf;
