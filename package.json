@@ -4,6 +4,7 @@
   "description": "A small polyfill for Object.setprototypeof",
   "main": "index.js",
   "typings": "index.d.ts",
+  "files":[],
   "scripts": {
     "test": "standard && mocha",
     "testallversions": "npm run node010 && npm run node4 && npm run node6 && npm run node9 && npm run node11",
